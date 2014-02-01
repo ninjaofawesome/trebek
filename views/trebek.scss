@@ -1,6 +1,5 @@
-$flatiron-blue: #26c4ff;
+$flatiron-blue: #61617F;
 
-@import url(http://fonts.googleapis.com/css?family=Overlock:400,700,900,400italic,700italic,900italic);
 
 @mixin border-radius($size) {
   -webkit-border-radius: $size;
@@ -9,7 +8,7 @@ $flatiron-blue: #26c4ff;
 }
 
 body {
-  font-family: 'Overlock', 'Helvetica', 'Arial', sans-serif;
+  font-family:'Helvetica', 'Arial', sans-serif;
   background: url(/img/shattered-island.gif);
 }
 
@@ -58,9 +57,15 @@ footer {
 
 /* type */
 h1 {
-  color: white;
+  color: #61617F;
   font-weight: 900;
   font-size: 40px;
+}
+
+h3 {
+  color: #3C3B7F;
+  font-weight: 900;
+  font-size: 20px;
 }
 
 /* cards */
@@ -68,7 +73,7 @@ h1 {
   @include border-radius(10px);
 
   background-color: $flatiron-blue;
-  height: 90px;
+  height: 180px;
   border: 2.5px solid transparent;
   position: relative;
 
@@ -86,9 +91,11 @@ h1 {
     width: 100%;
     text-align: center;
     position: absolute;
+    margin-top: 10%;
     top: 27.5px;
-    color: white;
+    color: #C3C2FF;
     font-weight: 700;
+    font-size: 1.2em;
   }
   .value, .cat {
     font-size: 30px;
@@ -100,7 +107,7 @@ h1 {
 
   /* card status */
   &.chosen {
-    border: 2.5px solid yellow;
+    border: 2.5px #C3C2FF;
   }
   &.played {
     border: 2.5px solid gray;
@@ -149,15 +156,15 @@ h1 {
     @include border-radius(10px);
 
     border: none;
-    background-color: white;
-    color: black;
+    background-color: red;
+    color: white;
     font-size: 20px;
     font-weight: 900;
-    width: 40px;
-    height: 40px;
+    width: 140px;
+    height: 70px;
     text-align: center;
     &.disabled{
-      background-color: gray;
+      background-color: #3C3B7F;
       color: #666666;
     }
   }

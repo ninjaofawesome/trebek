@@ -1,8 +1,10 @@
-%form{:method=>"/games/jeopardy", :action=>"post"}
-  %label Game Name:
-  %input{:type=>"text", :name=>"name"}
-
-  %label Deck:
-  %input{:type=>"text", :name=>"deck_file"}
-
-  %button{:type=>"submit"} Create Game
+%h1 Gettin' Wilde.
+%h3 How well do you know your Wilde?  Complete these quotes.
+.board
+  - @cards.collect { |card| card.category }.uniq!.each do |category|
+    - @cards.each do |card|
+      = partial :card, @card=card
+%footer
+  powered by gambit and trebek, (c)2014 ashley williams
+%script{:src=>"http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"}
+%script{:src=>"/wilde.js"}
